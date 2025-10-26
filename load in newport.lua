@@ -39,7 +39,7 @@ repeat wait() until mainMenu.Visible and mainMenu.MenuButtons.CargoManager.Visib
 wait(3)
 
 -- 2. CargoManager Button
-firesignal(pg.PortGui.PortMainMenu.MenuButtons.CargoManager.Button.MouseButton1Click)
+firesignal(game:GetService("Players").LocalPlayer.PlayerGui.PortGui.PortMainMenu.MenuButtons.CargoManager.Button.MouseButton1Click)
 
 wait(0.5)
 
@@ -59,12 +59,13 @@ wait(0.5)
 
 -- Refuel Button
 firesignal(game:GetService("Players").LocalPlayer.PlayerGui.PortGui.ShipServices.PurchaseFuel.MouseButton1Click)
-
+wait(0.5)
 -- Back to main menu
 firesignal(game:GetService("Players").LocalPlayer.PlayerGui.PortGui.ShipServices.Exit.MouseButton1Click)
+wait(0.5)
 
 -- 5. Undock Button
-firesignal(pg.PortGui.PortMainMenu.MenuButtons.Undock.Button.MouseButton1Click)
+firesignal(game:GetService("Players").LocalPlayer.PlayerGui.PortGui.PortMainMenu.MenuButtons.Undock.Button.MouseButton1Click)
 
 -- ------------------------------------------------------------------
 --  WAIT FOR UNDOCKING TO FINISH
